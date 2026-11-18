@@ -288,7 +288,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .chapter p.body{max-width:62ch;margin-top:var(--s-m);color:var(--text)}
 .figs{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--gutter);margin-top:var(--s-l);align-items:start}
 .figs .c12{grid-column:span 12}.figs .c8{grid-column:span 8}.figs .c7{grid-column:span 7}.figs .c6{grid-column:span 6}.figs .c5{grid-column:span 5}.figs .c4{grid-column:span 4}.figs .c3{grid-column:span 3}
-@media (max-width:760px){.figs>*{grid-column:1/-1!important}.figs>.c3{grid-column:span 6!important}}
+@media (max-width:760px){.figs>*{grid-column:1/-1!important}}
 .callout{margin-top:var(--s-xl);border-radius:var(--r-m);background:var(--metric-bg);padding:var(--s-l)}
 .callout .metric{font-size:var(--fs-number)}
 .next{display:block;text-decoration:none;border-top:1px solid var(--line);margin-top:var(--s-2xl);padding-top:var(--s-m)}
@@ -684,7 +684,11 @@ ul,ol{margin:0;padding:0;list-style:none}
     </dl>
   </div>
   <div class="wrap">
-    <figure class="fig"><button data-cap="Prego identity: wordmark, app icon and palette"><img src="img/pr-id.jpg" alt="Prego wordmark, app icon and palette"></button></figure>
+    <div class="figs" style="margin-top:0">
+      <figure class="fig c4"><button data-cap="Prego wordmark"><img src="img/pr-identity-1.webp" width="1000" height="600" alt="White Prego wordmark on basil green"></button></figure>
+      <figure class="fig c4"><button data-cap="Brand mark construction, based on a two-seat table"><img src="img/pr-identity-2.webp" width="1000" height="600" alt="Construction drawing of the Prego brand mark next to the app icon"></button></figure>
+      <figure class="fig c4"><button data-cap="Colour palette"><img src="img/pr-identity-3.webp" width="1000" height="600" alt="Prego colour palette: basil green, olive green, salmon pink, dark green, green tint and white"></button></figure>
+    </div>
     <section class="chapter split">
       <p class="t-label t-muted">01 · Identity</p>
       <div>
@@ -693,14 +697,9 @@ ul,ol{margin:0;padding:0;list-style:none}
       </div>
     </section>
     <div class="chapter figs" style="padding-top:var(--s-l)">
-      <figure class="fig c3"><button data-cap="Prego wordmark"><img src="img/pr-identity-1.webp" width="1000" height="600" alt="White Prego wordmark on basil green" loading="lazy"></button></figure>
-      <figure class="fig c3"><button data-cap="Brand mark construction, based on a two-seat table"><img src="img/pr-identity-2.webp" width="1000" height="600" alt="Construction drawing of the Prego brand mark" loading="lazy"></button></figure>
-      <figure class="fig c3"><button data-cap="Colour palette"><img src="img/pr-identity-3.webp" width="1000" height="600" alt="Prego colour palette: basil green, olive green, salmon pink, dark green, green tint and white" loading="lazy"></button></figure>
-      <figure class="fig c3"><button data-cap="Stationery"><img src="img/pr-identity-4.webp" width="1000" height="600" alt="Prego letterhead, flyer and business cards" loading="lazy"></button></figure>
-    </div>
-    <div class="figs" style="margin-top:var(--gutter)">
-      <figure class="fig c7"><button data-cap="Restaurant dashboard"><img src="img/pr-vis.jpg" alt="Prego dashboard on a desktop display" loading="lazy"></button><figcaption class="t-label">Visual design &amp; interface elements</figcaption></figure>
-      <figure class="fig c5"><button data-cap="Dark dashboard UI"><img src="img/pr-dash.jpg" alt="Prego dashboard in dark green" loading="lazy"></button><figcaption class="t-label">Restaurant dashboard</figcaption></figure>
+      <figure class="fig c5"><button data-cap="Stationery"><img src="img/pr-identity-4.webp" width="1000" height="600" alt="Prego letterhead, flyer and business cards" loading="lazy"></button><figcaption class="t-label">Stationery</figcaption></figure>
+      <figure class="fig c4"><button data-cap="Restaurant dashboard"><img src="img/pr-vis.jpg" width="1800" height="1363" alt="Prego dashboard on a desktop display" loading="lazy"></button><figcaption class="t-label">Visual design &amp; interface elements</figcaption></figure>
+      <figure class="fig c3"><button data-cap="Dark dashboard UI"><img src="img/pr-dash.jpg" width="1527" height="1572" alt="Prego dashboard in dark green" loading="lazy"></button><figcaption class="t-label">Restaurant dashboard</figcaption></figure>
     </div>
     <section class="chapter split">
       <p class="t-label t-muted">02 · Booking flow</p>
