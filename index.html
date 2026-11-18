@@ -212,8 +212,10 @@ ul,ol{margin:0;padding:0;list-style:none}
 .grid{display:grid;gap:var(--s-l) var(--gutter)}
 .grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .grid--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1100px){.grid--4{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:980px){.grid--3{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:640px){.grid--3,.grid--2{grid-template-columns:1fr}}
+@media (max-width:640px){.grid--3,.grid--2,.grid--4{grid-template-columns:1fr}}
 .card{display:grid;grid-template-rows:subgrid;grid-row:span 4;row-gap:var(--s-s);text-decoration:none;color:inherit}
 .grid--plain .card{grid-row:span 3}
 .card__media{border-radius:var(--r-m);overflow:hidden;background:var(--bg-raised);aspect-ratio:4/3}
@@ -418,11 +420,16 @@ ul,ol{margin:0;padding:0;list-style:none}
       <h2 class="t-label t-muted">Case studies</h2>
       <a class="t-label link-arrow" href="#work">Open portfolio <span>→</span></a>
     </div>
-    <div class="grid grid--3 grid--plain" style="margin-top:var(--s-s)">
+    <div class="grid grid--4 grid--plain" style="margin-top:var(--s-s)">
       <a class="card" href="#lahitapiola">
         <div class="card__media"><img src="img/case-lt-v4.webp" width="1200" height="900" alt="Duet design system components and Figma variables"></div>
         <p class="card__eyebrow t-label">LähiTapiola · Financial services</p>
         <h3 class="card__title"><span>Design leadership &amp; Duet</span></h3>
+      </a>
+      <a class="card" href="#prego">
+        <div class="card__media"><img src="img/case-prego-v4.webp" width="1200" height="900" alt="Prego restaurant dashboard, wordmark and app icon"></div>
+        <p class="card__eyebrow t-label">Prego · Hospitality</p>
+        <h3 class="card__title"><span>Booking tool for restaurants</span></h3>
       </a>
       <a class="card" href="#hintsa">
         <div class="card__media"><img src="img/case-hintsa-v4.webp" width="1200" height="900" alt="A runner with earphones checking a Better Life audio lesson on his phone"></div>
@@ -456,9 +463,9 @@ ul,ol{margin:0;padding:0;list-style:none}
       <div>
       <ul class="logos">
         <li><a href="#lahitapiola" aria-label="LähiTapiola case study"><img class="logo-light" src="img/logos/LahiTapiola.svg" width="400" height="200" alt="LähiTapiola" loading="lazy"><img class="logo-dark" src="img/logos/LahiTapiola_Dark.svg" width="400" height="200" alt="" aria-hidden="true" loading="lazy"></a></li>
+        <li><a href="#prego" aria-label="Prego case study"><img class="logo-light" src="img/logos/Prego.svg" width="400" height="200" alt="Prego" loading="lazy"><img class="logo-dark" src="img/logos/Prego_Dark.svg" width="400" height="200" alt="" aria-hidden="true" loading="lazy"></a></li>
         <li><a href="#hintsa" aria-label="Hintsa Performance case study"><img class="logo-light" src="img/logos/Hintsa.svg" width="400" height="200" alt="Hintsa Performance" loading="lazy"><img class="logo-dark" src="img/logos/Hintsa_Dark.svg" width="400" height="200" alt="" aria-hidden="true" loading="lazy"></a></li>
         <li><a href="#totaljobs" aria-label="Totaljobs case study"><img class="logo-light" src="img/logos/TotalJobs.svg" width="400" height="200" alt="Totaljobs" loading="lazy"><img class="logo-dark" src="img/logos/TotalJobs_Dark.svg" width="400" height="200" alt="" aria-hidden="true" loading="lazy"></a></li>
-        <li><a href="#prego" aria-label="Prego case study"><img class="logo-light" src="img/logos/Prego.svg" width="400" height="200" alt="Prego" loading="lazy"><img class="logo-dark" src="img/logos/Prego_Dark.svg" width="400" height="200" alt="" aria-hidden="true" loading="lazy"></a></li>
         <li><a href="#newscorp" aria-label="News Corp case study"><img class="logo-light" src="img/logos/NewsCorp.svg" width="400" height="200" alt="News Corp" loading="lazy"><img class="logo-dark" src="img/logos/NewsCorp_Dark.svg" width="400" height="200" alt="" aria-hidden="true" loading="lazy"></a></li>
         <li><span><img class="logo-light" src="img/logos/Rovio.svg" width="400" height="200" alt="Rovio" loading="lazy"><img class="logo-dark" src="img/logos/Rovio_Dark.svg" width="400" height="200" alt="" aria-hidden="true" loading="lazy"></span></li>
         <li><span><img class="logo-light" src="img/logos/Kone.svg" width="400" height="200" alt="KONE" loading="lazy"><img class="logo-dark" src="img/logos/Kone_Dark.svg" width="400" height="200" alt="" aria-hidden="true" loading="lazy"></span></li>
@@ -475,7 +482,7 @@ ul,ol{margin:0;padding:0;list-style:none}
   <div class="wrap page-head">
     <p class="t-label t-muted">Portfolio · 2015–2026</p>
     <h1 class="t-display">Selected work</h1>
-    <p class="t-lead">Five case studies across financial services, coaching, recruitment, hospitality and media.</p>
+    <p class="t-lead">Five case studies across financial services, hospitality, coaching, recruitment and media.</p>
   </div>
   <div class="wrap">
     <div class="grid grid--2">
@@ -484,6 +491,12 @@ ul,ol{margin:0;padding:0;list-style:none}
         <p class="card__eyebrow t-label">LähiTapiola · Financial services · 2022–2026</p>
         <h3 class="card__title"><span>Design leadership &amp; the Duet design system</span></h3>
         <div class="card__foot"><p class="card__summary">Led a team of designers building a unified customer experience and one design system for two brands.</p></div>
+      </a>
+      <a class="card" href="#prego">
+        <div class="card__media"><img src="img/case-prego-v4.webp" width="1200" height="900" alt="Prego restaurant dashboard, wordmark and app icon" loading="lazy"></div>
+        <p class="card__eyebrow t-label">Prego · Hospitality · 2022</p>
+        <h3 class="card__title"><span>Identity &amp; booking tool for restaurants</span></h3>
+        <div class="card__foot"><p class="card__summary">A new name, identity and sharper core flows for a booking system made by restaurateurs.</p></div>
       </a>
       <a class="card" href="#hintsa">
         <div class="card__media"><img src="img/case-hintsa-v4.webp" width="1200" height="900" alt="A runner with earphones checking a Better Life audio lesson on his phone" loading="lazy"></div>
@@ -496,12 +509,6 @@ ul,ol{margin:0;padding:0;list-style:none}
         <p class="card__eyebrow t-label">Totaljobs · Recruitment · 2022</p>
         <h3 class="card__title"><span>Conversational job search</span></h3>
         <div class="card__foot"><p class="card__summary">A chat-like timeline and focused job cards, handed over as a detailed Figma prototype.</p></div>
-      </a>
-      <a class="card" href="#prego">
-        <div class="card__media"><img src="img/case-prego-v4.webp" width="1200" height="900" alt="Prego restaurant dashboard, wordmark and app icon" loading="lazy"></div>
-        <p class="card__eyebrow t-label">Prego · Hospitality · 2022</p>
-        <h3 class="card__title"><span>Identity &amp; booking tool for restaurants</span></h3>
-        <div class="card__foot"><p class="card__summary">A new name, identity and sharper core flows for a booking system made by restaurateurs.</p></div>
       </a>
       <a class="card" href="#newscorp">
         <div class="card__media"><img src="img/case-newscorp-v4.webp" width="1200" height="900" alt="News Corp video-on-demand concept on a tablet" loading="lazy"></div>
@@ -571,7 +578,7 @@ ul,ol{margin:0;padding:0;list-style:none}
     </div>
 
 
-    <a class="next" href="#hintsa"><p class="t-label t-muted">Next case · Hintsa Performance</p><p class="t-display"><span>Better Life app</span><span class="go">→</span></p></a>
+    <a class="next" href="#prego"><p class="t-label t-muted">Next case · Prego</p><p class="t-display"><span>Booking tool for restaurants</span><span class="go">→</span></p></a>
   </div>
 </article>
 
@@ -652,7 +659,7 @@ ul,ol{margin:0;padding:0;list-style:none}
     <div class="chapter figs" style="padding-top:var(--s-l)">
       <figure class="fig c12"><button data-cap="Job cards with just the right information"><img src="img/tj-3.jpg" alt="Three phone screens of job cards" loading="lazy"></button><figcaption class="t-label">Focused job cards, filtering &amp; saving</figcaption></figure>
     </div>
-    <a class="next" href="#prego"><p class="t-label t-muted">Next case · Prego</p><p class="t-display"><span>Booking tool for restaurants</span><span class="go">→</span></p></a>
+    <a class="next" href="#newscorp"><p class="t-label t-muted">Next case · News Corp</p><p class="t-display"><span>Social video on demand</span><span class="go">→</span></p></a>
   </div>
 </article>
 
@@ -694,7 +701,7 @@ ul,ol{margin:0;padding:0;list-style:none}
       <figure class="fig c7"><button data-cap="Core booking flow"><img src="img/pr-ux.jpg" alt="Three phone screens of the booking flow" loading="lazy"></button><figcaption class="t-label">Core booking flow</figcaption></figure>
       <figure class="fig c5"><button data-cap="Custom branding for individual restaurants"><img src="img/pr-brand.jpg" alt="Booking flow styled for two restaurants" loading="lazy"></button><figcaption class="t-label">Custom branding per restaurant</figcaption></figure>
     </div>
-    <a class="next" href="#newscorp"><p class="t-label t-muted">Next case · News Corp</p><p class="t-display"><span>Social video on demand</span><span class="go">→</span></p></a>
+    <a class="next" href="#hintsa"><p class="t-label t-muted">Next case · Hintsa Performance</p><p class="t-display"><span>Better Life app</span><span class="go">→</span></p></a>
   </div>
 </article>
 
